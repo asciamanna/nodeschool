@@ -15,14 +15,14 @@ function get(index) {
 			responses[index] = data.toString();
 			responseCount++;
 
-			if(responseCount == 3)
+			if(responseCount === 3)
 				logResults();
 		}));
 	});
 }
 
 function logResults() {
-	while(responses.length != 0) {
+	while(responses.length !== 0) {
 		console.log(responses.shift());
 	}
 }
